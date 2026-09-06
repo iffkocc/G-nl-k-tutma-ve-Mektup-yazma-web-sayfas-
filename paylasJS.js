@@ -71,7 +71,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let kodlanmis;
         try {
-            kodlanmis = btoa(unescape(encodeURIComponent(JSON.stringify(veri))));
+            const json = JSON.stringify(veri);
+            const bytes = new TextEncoder().encode(json);
+            let binary = '';
+            bytes.forEach(function (b) { binary += String.fromCharCode(b); });
+            kodlanmis = btoa(binary);
         } catch (err) {
             sonucMesaj.textContent = 'Bağlantı oluşturulamadı, mektup çok uzun olabilir.';
             sonucMesaj.style.display = 'block';

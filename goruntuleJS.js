@@ -16,7 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!kod) return null;
 
         try {
-            const json = decodeURIComponent(escape(atob(kod)));
+            const binary = atob(kod);
+            const bytes = new Uint8Array(binary.length);
+            for (let i = 0; i < binary.length; i++) {
+                bytes[i] = binary.charCodeAt(i);
+            }
+            // fatal:false -> bozuk bir bayt olsa bile çökmez, o karakteri
+            // "�" ile değiştirip devam eder.
+            const json = new TextDecoder('utf-8', { fatal: false }).decode(bytes);
             return JSON.parse(json);
         } catch (e) {
             return null;
