@@ -128,28 +128,25 @@ body{
     inset: 0;
     display: none;
     z-index: 10;
-}
-
-.mektup-arkaplan{
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.55);
+    background: #0a0522;
+    overflow-y: auto;
+    padding: 30px 0;
+    box-sizing: border-box;
 }
 
 .mektup-kutu{
     position: relative;
-    z-index: 1;
-    max-width: 600px;
-    margin: 6vh auto;
-    background: rgba(255,255,255,0.93);
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    max-height: 82vh;
-    overflow-y: auto;
+    width: 600px;
+    max-width: 92vw;
+    aspect-ratio: 3 / 4;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
     animation: mektupBeliriver 1s ease;
+    overflow: hidden;
 }
 
 @keyframes mektupBeliriver{
@@ -158,10 +155,19 @@ body{
 }
 
 .mektup-icerik{
+    position: absolute;
+    top: 14%;
+    left: 14%;
+    right: 14%;
+    bottom: 14%;
+    overflow-y: auto;
     font-size: 16px;
     color: #222;
     line-height: 1.6;
     word-wrap: break-word;
+    background: rgba(255,255,255,0.35);
+    padding: 15px;
+    border-radius: 6px;
 }
 
 /* ---- Hata ekranı ---- */
