@@ -1,0 +1,60 @@
+.isim-modal-arka{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.isim-modal-kutu{
+    background: #fdf6ee;
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    font-family: 'Times New Roman', serif;
+    color: #2a1b12;
+}
+
+.isim-modal-kutu p{
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.isim-modal-kutu input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #c9a98a;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.isim-modal-btnler{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.isim-modal-btnler button{
+    background: #a2d250;
+    color: #fff;
+    border: none;
+}
+
+#isimVazgec{
+    background: #999 !important;
+}
+
+.link-sonuc-mesaj{
+    display: none;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #3f7d20;
+    white-space: pre-wrap;
+    word-break: break-all;
+}

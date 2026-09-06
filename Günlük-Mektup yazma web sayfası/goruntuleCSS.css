@@ -1,0 +1,179 @@
+body{
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #0a0522;
+    font-family: 'Times New Roman', serif;
+}
+
+/* ---- Soru ekranı ---- */
+.soru-ekrani{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #2b0f3a, #05030d);
+    z-index: 20;
+}
+
+.soru-kutu{
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(6px);
+    padding: 40px 50px;
+    border-radius: 16px;
+    text-align: center;
+    color: #fff;
+    max-width: 380px;
+    animation: beliriver 0.6s ease;
+}
+
+@keyframes beliriver{
+    from{ opacity: 0; transform: translateY(20px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
+
+.soru-kutu p{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.btn-soru{
+    margin: 6px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #e14f7d;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    transition: transform 0.2s;
+    font-family: inherit;
+}
+
+.btn-soru:hover{ transform: scale(1.05); }
+
+.btn-ikincil{
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+/* ---- Zarf sahnesi ---- */
+.zarf-sahne{
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #05030d;
+    z-index: 15;
+}
+
+.zarf{
+    position: relative;
+    width: 280px;
+    height: 190px;
+}
+
+.zarf-govde{
+    position: absolute;
+    inset: 0;
+    background: #f4e8d8;
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.zarf-kapak{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 95px solid #e2cdb0;
+    transform-origin: top;
+    transition: transform 1s ease;
+    z-index: 3;
+}
+
+.mektup-kagidi{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: -10px;
+    height: 0;
+    background: #fffdf8;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: height 1s ease 0.6s, bottom 1s ease 0.6s;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.zarf-sahne.ac .zarf-kapak{
+    transform: rotateX(180deg);
+}
+
+.zarf-sahne.ac .mektup-kagidi{
+    height: 260px;
+    bottom: -160px;
+}
+
+/* ---- Mektup ekranı ---- */
+.mektup-ekrani{
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 10;
+}
+
+.mektup-arkaplan{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.55);
+}
+
+.mektup-kutu{
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 6vh auto;
+    background: rgba(255,255,255,0.93);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    max-height: 82vh;
+    overflow-y: auto;
+    animation: mektupBeliriver 1s ease;
+}
+
+@keyframes mektupBeliriver{
+    from{ opacity: 0; transform: translateY(40px) scale(0.95); }
+    to{ opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.mektup-icerik{
+    font-size: 16px;
+    color: #222;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+/* ---- Hata ekranı ---- */
+.hata-ekrani{
+    display: none;
+    position: fixed;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #05030d;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+}

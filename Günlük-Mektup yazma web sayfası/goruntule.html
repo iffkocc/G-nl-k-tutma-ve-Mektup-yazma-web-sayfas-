@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bir Mektubunuz Var</title>
+    <link rel="stylesheet" href="goruntuleCSS.css">
+</head>
+<body>
+
+    <div id="soruEkrani" class="soru-ekrani">
+        <div class="soru-kutu">
+            <p id="soruMetni">Size bir mektup var. Açmak ister misiniz?</p>
+            <div class="soru-btnler">
+                <button id="evetBtn" type="button" class="btn-soru">Evet, aç</button>
+                <button id="hayirBtn" type="button" class="btn-soru btn-ikincil">Şimdi değil</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="zarfSahne" class="zarf-sahne">
+        <div class="zarf">
+            <div class="zarf-govde"></div>
+            <div class="mektup-kagidi"></div>
+            <div class="zarf-kapak"></div>
+        </div>
+    </div>
+
+    <div id="mektupEkrani" class="mektup-ekrani">
+        <div class="mektup-arkaplan" id="mektupArkaplan"></div>
+        <div class="mektup-kutu" id="mektupKutu">
+            <div id="mektupIcerik" class="mektup-icerik"></div>
+        </div>
+    </div>
+
+    <div id="hataEkrani" class="hata-ekrani">
+        <p>Bu bağlantı geçersiz veya bozuk görünüyor.</p>
+    </div>
+
+<script src="goruntuleJS.js"></script>
+</body>
+</html>
