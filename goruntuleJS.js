@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Her sayfa numarasına karşılık gelen arkaplan görseli.
     // Dosya adlarını/uzantılarını kendi "arkaplan" klasörüne göre düzenle.
     const SAYFA_BILGILERI = {
-        '1': 'arkaplan/arkaplan-sayfa-1.jfif',
-        '2': 'arkaplan/arkaplan-sayfa-2.jfif',
-        '3': 'arkaplan/arkaplan-sayfa-3.jfif',
-        '4': 'arkaplan/arkaplan-sayfa-4.jfif',
-        '5': 'arkaplan/arkaplan-sayfa-5.jfif'
+        '1': 'mektup-imgs/mektup-sayfa-1.jpg',
+        '2': 'mektup-imgs/mektup-sayfa-2.jpg',
+        '3': 'mektup-imgs/mektup-sayfa-3.png',
+        '4': 'mektup-imgs/mektup-sayfa-4.jfif',
+        '5': 'mektup-imgs/mektup-sayfa-5.jpg'
     };
 
     function veriyiCoz() {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
             mektupEkrani.style.display = 'block';
 
             const arkaplanYolu = SAYFA_BILGILERI[String(veri.s)] || SAYFA_BILGILERI['1'];
-            document.getElementById('mektupArkaplan').style.backgroundImage =
+            document.getElementById('mektupKutu').style.backgroundImage =
                 "url('" + arkaplanYolu + "')";
 
             document.getElementById('mektupIcerik').innerHTML = veri.m;
