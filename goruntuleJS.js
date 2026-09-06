@@ -9,6 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
         '4': 'mektup-imgs/mektup-sayfa-4.jfif',
         '5': 'mektup-imgs/mektup-sayfa-5.jpg'
     };
+    const bilgi_sayfa = {
+        '1':'arkaplan/arkaplan-sayfa-1.jfif',
+        '2':'arkaplan/arkaplan-sayfa-2.png',
+        '3':'arkaplan/arkaplan-sayfa-3.png',
+        '4':'arkaplan/arkaplan-sayfa-4.png',
+        '5':'arkaplan/arkaplan-sayfa-5.jpg',
+        
+    };
 
     function veriyiCoz() {
         const params = new URLSearchParams(window.location.search);
