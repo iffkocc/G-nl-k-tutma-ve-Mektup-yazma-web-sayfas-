@@ -1,0 +1,45 @@
+body {
+  background-color: rgb(8, 6, 36);
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('img/anasayfa-arkaplan.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  transform-origin: center center;
+}
+
+body:has(:hover):not(:has(.ust-cubuk:hover))::before {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
+.mektup-sayfa-ayar{
+
+    width: 250px;
+    height: 350px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 6px;
+    border-radius: 6px;
+
+}
+.mektup-sayfa-ayar:hover{
+
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+
+}
